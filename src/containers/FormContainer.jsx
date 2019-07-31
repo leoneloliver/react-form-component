@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-select/dist/css/bootstrap-select.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 import $ from 'jquery/dist/jquery';
-
-import 'bootstrap-select/dist/css/bootstrap-select.min.css';
-
-import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap-select/dist/js/bootstrap-select.min.js';
 
 import Input from '../components/Input'
@@ -19,7 +18,7 @@ class FormContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            genderOptions: ["Male","Female","Others"]
+            businessOptions: ['Advertising & Promotion', 'Bill Payment/Supplier Payment', 'Equipment', 'Hiring', 'Inventory/Sourcing']
         };
     }
     
@@ -30,21 +29,21 @@ class FormContainer extends Component {
                     inputtype={"text"}
                     title={"Full Name"}
                     name={"name"}
-                    placeholder={"Enter your name"}
+                    placeholder={"Enter your Name"}
                 />
 
                 < Input 
                     inputtype={"text"}
                     title={"Address"}
                     name={"address"}
-                    placeholder={"Enter your address"}
+                    placeholder={"Enter your Address"}
                 />
 
                 < Select 
-                    title={"Gender"}
-                    name={"gender"}
-                    placeholder={"Select Gender"}
-                    options={this.state.genderOptions}
+                    title={"Business"}
+                    name={"business"}
+                    placeholder={"Select Business"}
+                    options={this.state.businessOptions}
                 />
             </div>
         )
