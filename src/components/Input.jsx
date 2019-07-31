@@ -9,6 +9,7 @@ const Input = props => {
                 id={props.name} 
                 name={props.name} 
                 type={props.inputtype} 
+                required={props.required}
                 {...props}
             />
             <i className={props.icon} aria-hidden="true"></i>

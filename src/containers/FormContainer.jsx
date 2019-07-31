@@ -23,55 +23,63 @@ class FormContainer extends Component {
         };
     }
     sendInfo(e){
-        alert('Hello Hacker! Info has been sent \o/');
+        //alert('Hello Hacker! Info has been sent...');
+    }
+    submitForm(e){
+        e.preventDefault();
+        alert('Hello Hacker! Info has been sent...');
     }
     render() {
         return (
-            <div className="container py-3 mt-3">
-                <div className="row justify-content-center">
-                    <div className="col-xs-12 col-xl-4 card-special">
-                        <div className="card card-outline-secondary border-0">
-                            <div className="card-body">
-                            < Input 
-                                inputtype={"text"}
-                                title={"Full Name"}
-                                name={"name"}
-                                placeholder={"Enter your Name"}
-                                icon={"fa fa-user-o form-icon"}
-                            />
-                            < Input 
-                                inputtype={"text"}
-                                title={"Address"}
-                                name={"address"}
-                                placeholder={"Enter your Address"}
-                                icon={"fa fa-envelope-o form-icon"}
-                            />
-                            < Select 
-                                title={"Business"}
-                                name={"business"}
-                                placeholder={"Select Business"}
-                                options={this.state.businessOptions}
-                            />
-                            < Select 
-                                title={"Gender"}
-                                name={"gender"}
-                                placeholder={"Select Gender"}
-                                options={this.state.genderOptions}
-                            />
-                            < SubmitButton 
-                                name={"Connect"}
-                                idName={"submit"}
-                                inputtype={"submit"}
-                                action={this.sendInfo}
-                            />
-                            </div>
+            <form autoComplete="off" className="form" id="form" onSubmit={this.submitForm}>
+                <div className="container py-3 mt-3">
+                    <div className="row justify-content-center">
+                        <div className="col-xs-12 col-xl-4 card-special">
+                            <div className="card card-outline-secondary border-0">
+                                <div className="card-body">
+                                < Input 
+                                    inputtype={"text"}
+                                    title={"Full Name"}
+                                    name={"name"}
+                                    placeholder={"Enter your Name"}
+                                    icon={"fa fa-user-o form-icon"}
+                                    required={"required"}
+                                />
+                                < Input 
+                                    inputtype={"email"}
+                                    title={"Address"}
+                                    name={"address"}
+                                    placeholder={"Enter your Address"}
+                                    icon={"fa fa-envelope-o form-icon"}
+                                    required={"required"}
+                                />
+                                < Select 
+                                    title={"Business"}
+                                    name={"business"}
+                                    placeholder={"Select Business"}
+                                    options={this.state.businessOptions}
+                                />
+                                < Select 
+                                    title={"Gender"}
+                                    name={"gender"}
+                                    placeholder={"Select Gender"}
+                                    options={this.state.genderOptions}
+                                />
+                                < SubmitButton 
+                                    name={"Connect"}
+                                    idName={"submit"}
+                                    inputtype={"submit"}
+                                    action={this.sendInfo}
+                                />
+                                </div>
 
+                            </div>
+                            
                         </div>
-                        
                     </div>
+                
                 </div>
-               
-            </div>
+            </form>
         )
     }
 }
