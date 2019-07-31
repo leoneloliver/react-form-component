@@ -17,8 +17,8 @@ class FormContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            businessOptions: ['Advertising & Promotion', 'Bill Payment/Supplier Payment', 'Equipment', 'Hiring', 'Inventory/Sourcing'],
-            genderOptions: ['Male', 'Famale', 'Other']
+            businessOptions: [{title:'Advertising & Promotion', value:0},{title:'Bill Payment/Supplier Payment',value:1},{title:'Equipment',value:2},{title:'Hiring',value:3},{title:'Inventory/Sourcing',value:4}],
+            genderOptions: [{title:'Male' , value:0},{title:'Female' , value:1}]
         };
     }
     render() {

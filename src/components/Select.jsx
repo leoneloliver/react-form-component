@@ -17,8 +17,8 @@ const Select = props => {
                 </option>
                 {props.options.map(option => {
                     return (
-                        <option key={option} value={option} label={option}>
-                            {option}
+                        <option key={option.value} value={option.value} label={option.title}>
+                            {option.title}
                         </option>
                     );
                 })}   
