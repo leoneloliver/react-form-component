@@ -14,7 +14,7 @@ const Select = props => {
             >
                 <option defaultValue selected disabled >
                     {props.placeholder}
-                </option >
+                </option>
                 {props.options.map(option => {
                     return (
                         <option key={option} value={option} label={option}>

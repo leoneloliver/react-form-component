@@ -1,10 +1,21 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import $ from 'jquery/dist/jquery';
+
+import 'bootstrap-select/dist/css/bootstrap-select.min.css';
+
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap-select/dist/js/bootstrap-select.min.js';
 
 import Input from '../components/Input'
 import Select from '../components/Select'
 
 class FormContainer extends Component {
+
+    componentDidMount(){
+        $('select').selectpicker();
+    }
     constructor(props){
         super(props);
         this.state = {
