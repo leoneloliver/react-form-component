@@ -3,7 +3,7 @@ import React from 'react';
 const Input = props => {
     return (
         <div className="form-group">
-            <label>{props.title}</label>
+            
             <input 
                 className="form-control" 
                 id={props.name} 
@@ -11,6 +11,8 @@ const Input = props => {
                 type={props.inputtype} 
                 {...props}
             />
+            <i className={props.icon} aria-hidden="true"></i>
+            <label className="ml-2">{props.title}</label>
         </div>
     )
 }

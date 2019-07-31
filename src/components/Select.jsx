@@ -4,7 +4,6 @@ import './select.css';
 const Select = props => {
     return (
         <div className="form-group select">
-            <label>{props.title}</label>
             <select 
                 className="form-control" 
                 id={props.name} 
@@ -23,6 +22,7 @@ const Select = props => {
                     );
                 })}   
             </select>
+            <label className="ml-2">{props.title}</label>
         </div>
     )
 }

@@ -23,34 +23,44 @@ class FormContainer extends Component {
     }
     render() {
         return (
-            <div className="container card p-5">
-                < Input 
-                    inputtype={"text"}
-                    title={"Full Name"}
-                    name={"name"}
-                    placeholder={"Enter your Name"}
-                />
-                <hr />
-                < Input 
-                    inputtype={"text"}
-                    title={"Address"}
-                    name={"address"}
-                    placeholder={"Enter your Address"}
-                />
-                <hr />
-                < Select 
-                    title={"Business"}
-                    name={"business"}
-                    placeholder={"Select Business"}
-                    options={this.state.businessOptions}
-                />
-                <hr />
-                < Select 
-                    title={"Gender"}
-                    name={"gender"}
-                    placeholder={"Select Gender"}
-                    options={this.state.genderOptions}
-                />
+            <div className="container py-3 mt-3">
+                <div className="row justify-content-center">
+                    <div className="col-xs-12 col-xl-4 card-special">
+                        <div className="card card-outline-secondary border-0">
+                            <div className="card-body">
+                            < Input 
+                                inputtype={"text"}
+                                title={"Full Name"}
+                                name={"name"}
+                                placeholder={"Enter your Name"}
+                                icon={"fa fa-user-o form-icon"}
+                            />
+                            < Input 
+                                inputtype={"text"}
+                                title={"Address"}
+                                name={"address"}
+                                placeholder={"Enter your Address"}
+                                icon={"fa fa-envelope-o form-icon"}
+                            />
+                            < Select 
+                                title={"Business"}
+                                name={"business"}
+                                placeholder={"Select Business"}
+                                options={this.state.businessOptions}
+                            />
+                            < Select 
+                                title={"Gender"}
+                                name={"gender"}
+                                placeholder={"Select Gender"}
+                                options={this.state.genderOptions}
+                            />
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+               
             </div>
         )
     }
