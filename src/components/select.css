@@ -18,3 +18,6 @@ ul.dropdown-menu li a {
   background-color: #fafbfb;
   font-size: 0.9rem;
 }
+.dropdown-menu.show {
+  padding: 0;
+}

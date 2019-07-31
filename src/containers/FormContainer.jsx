@@ -9,6 +9,7 @@ import 'bootstrap-select/dist/js/bootstrap-select.min.js';
 
 import Input from '../components/Input'
 import Select from '../components/Select'
+import SubmitButton from '../components/SubmitButton'
 
 class FormContainer extends Component {
     componentDidMount(){
@@ -20,6 +21,9 @@ class FormContainer extends Component {
             businessOptions: [{title:'Advertising & Promotion', value:0},{title:'Bill Payment/Supplier Payment',value:1},{title:'Equipment',value:2},{title:'Hiring',value:3},{title:'Inventory/Sourcing',value:4}],
             genderOptions: [{title:'Male' , value:0},{title:'Female' , value:1}]
         };
+    }
+    sendInfo(e){
+        alert('Hello Hacker! Info has been sent \o/');
     }
     render() {
         return (
@@ -53,6 +57,12 @@ class FormContainer extends Component {
                                 name={"gender"}
                                 placeholder={"Select Gender"}
                                 options={this.state.genderOptions}
+                            />
+                            < SubmitButton 
+                                name={"Connect"}
+                                idName={"submit"}
+                                inputtype={"submit"}
+                                action={this.sendInfo}
                             />
                             </div>
 
