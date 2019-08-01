@@ -110,6 +110,12 @@ code {
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
   width: 100% !important;
 }
+.separator{
+  width: 100%;
+  height: 1px;
+  background-color: #e1e4e8;
+  border: none;
+}
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
 body {
   font-family: 'Lato', sans-serif;
@@ -364,6 +370,9 @@ input[type="number"] {
 }
 
 @media (min-width: 992px) {
+  .separator{
+    width: 50%;
+  }
   body {
     background: #f9f9f9;
   }

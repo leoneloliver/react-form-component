@@ -67,7 +67,7 @@ class FormContainer extends Component {
                     <div className="row justify-content-center">
                         <div className="col-xs-12 col-xl-4 card-special">
                             <div className="card card-outline-secondary border-0">
-                                <div className="card-body">
+                                <div className="card-body pt-0">
                                     < Logo alt={"Lendified Logo"}/>
                                     < Input 
                                         inputtype={"text"}
