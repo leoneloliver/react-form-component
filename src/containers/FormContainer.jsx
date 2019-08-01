@@ -105,6 +105,7 @@ class FormContainer extends Component {
                                     step={500}
                                     action={this.changeValue}
                                     defaultValue={1500}
+                                    displayValue={"$ 1.500"}
                                 />
                                 < SubmitButton 
                                     name={"Connect"}
