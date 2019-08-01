@@ -41,6 +41,10 @@ class FormContainer extends Component {
             slider.oninput = function() {
               output.innerHTML = "$&nbsp;"+formatMoney(this.value);
             } 
+            slider.onchange = function() {
+                output.innerHTML = "$&nbsp;"+formatMoney(this.value);
+            }
+            
             function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ".") {
               try {
                 decimalCount = Math.abs(decimalCount);
