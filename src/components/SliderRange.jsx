@@ -1,4 +1,5 @@
 import React from 'react';
+import './slider.css';
 
 const SliderRange = props => {
     return (

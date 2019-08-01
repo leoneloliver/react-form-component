@@ -432,93 +432,6 @@ input[type="number"] {
 }
 
 
-
-
-
-
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 1px;
-  border-radius: 5px;
-  background: #9e9e9e;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity .2s;
-  border: 3px #9e9e9e solid;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 31px;
-  height: 31px;
-  margin-left: -5px;
-  border-radius: 50%; 
-  /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  /* background: #9dcc57; */
-  background-image: url('./salider-handle.png');
-  background-position: 0 auto;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: pointer;
-}
-.slider::-ms-thumb{
-  -webkit-appearance: none;
-  appearance: none;
-  width: 31px;
-  height: 31px;
-  margin-left: -5px;
-  border-radius: 50%; 
-  /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  /* background: #9dcc57; */
-  background-image: url('./salider-handle.png');
-  background-position: 0 auto;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: pointer;
-}
-.slider::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 31px;
-  height: 31px;
-  margin-left: -5px;
-  border-radius: 50%; 
-  /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  /* background: #9dcc57; */
-  background-image: url('./salider-handle.png');
-  background-position: 0 auto;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: pointer;
-}
-
-.slider:hover::-webkit-slider-thumb{
-  box-shadow: 0px 0px 0px 5px var(--brand-primary)38;
-  -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    transition: all .5s ease;
-}
-
-.slider:active::-webkit-slider-thumb{
-  box-shadow: 0px 0px 0px 5px var(--brand-primary)38;
-  -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    transition: all .5s ease;
-}
-.slider-display-amount{
-  width: 95px;
-  height: 45px !important;
-  border-radius: 4px;
-  border: 1px solid var(--brand-primary);
-  margin: 0 auto;
-}
-
 input:focus, textarea:focus, select:focus, .bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
   outline: none !important;
 }
@@ -532,3 +445,4 @@ input:focus, textarea:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   outline: 0;
   box-shadow: 0 0 0 0.2rem transparent);
 }
+
