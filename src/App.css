@@ -450,7 +450,6 @@ input[type="number"] {
   appearance: none;
   width: 31px;
   height: 31px;
-  margin-left: -5px;
   border-radius: 50%; 
   /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
   /* background: #9dcc57; */
