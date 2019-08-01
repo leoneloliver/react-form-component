@@ -21,8 +21,15 @@ class FormContainer extends Component {
         super(props);
         this.state = {
             businessOptions: [{title:'Advertising & Promotion', value:0},{title:'Bill Payment/Supplier Payment',value:1},{title:'Equipment',value:2},{title:'Hiring',value:3},{title:'Inventory/Sourcing',value:4}],
-            genderOptions: [{title:'Male' , value:0},{title:'Female' , value:1}]
+            genderOptions: [{title:'Male' , value:0},{title:'Female' , value:1}],
+            valueSlider: 'Please write an essay about your favorite DOM element.'
         };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({valueSlider: event.target.value});
+        $("#myRange").prop("value",event.target.value);
     }
     sendInfo(e){
         //e.preventDefault();
@@ -59,6 +66,9 @@ class FormContainer extends Component {
               }
             };
         };
+        window.setTimeout(function(){
+            $("#myRange").prop("value", "5500");
+        },5000);
     }
     render() {
         return (
@@ -68,7 +78,11 @@ class FormContainer extends Component {
                         <div className="col-xs-12 col-xl-4 card-special">
                             <div className="card card-outline-secondary border-0">
                                 <div className="card-body pt-0">
-                                    < Logo alt={"Lendified Logo"}/>
+                                    {/* <input type="text" onChange={this.handleChange} /> */}
+                                    
+                                    < Logo 
+                                        alt={"Lendified Logo"}
+                                    />
                                     < Input 
                                         inputtype={"text"}
                                         title={"Full Name"}
