@@ -44,7 +44,7 @@ class FormContainer extends Component {
             slider.onchange = function() {
                 output.innerHTML = "$&nbsp;"+formatMoney(this.value);
             }
-            
+
             function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ".") {
               try {
                 decimalCount = Math.abs(decimalCount);
@@ -104,6 +104,7 @@ class FormContainer extends Component {
                                     max={15000}
                                     step={500}
                                     action={this.changeValue}
+                                    defaultValue={1500}
                                 />
                                 < SubmitButton 
                                     name={"Connect"}
