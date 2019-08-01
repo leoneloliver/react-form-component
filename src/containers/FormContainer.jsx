@@ -10,6 +10,7 @@ import 'bootstrap-select/dist/js/bootstrap-select.min.js';
 import Input from '../components/Input'
 import Select from '../components/Select'
 import SubmitButton from '../components/SubmitButton'
+import SliderRange from '../components/SliderRange';
 
 class FormContainer extends Component {
     componentDidMount(){
@@ -23,11 +24,36 @@ class FormContainer extends Component {
         };
     }
     sendInfo(e){
-        //alert('Hello Hacker! Info has been sent...');
+        e.preventDefault();
+        console.log('Name '+ document.getElementsByName("name")[0].value);
     }
     submitForm(e){
         e.preventDefault();
         alert('Hello Hacker! Info has been sent...');
+    }
+    changeValue() {
+        document.getElementById("myRange").oninput  = function(){
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("myMoney");
+            output.innerHTML = slider.value; // Display the default slider value
+          
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+              output.innerHTML = "$&nbsp;"+formatMoney(this.value);
+            } 
+            function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ".") {
+              try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+                const negativeSign = amount < 0 ? "-" : "";
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
+                return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+              } catch (e) {
+                console.log(e)
+              }
+            };
+        };
     }
     render() {
         return (
@@ -65,6 +91,16 @@ class FormContainer extends Component {
                                     placeholder={"Select Gender"}
                                     options={this.state.genderOptions}
                                 />
+                                < SliderRange 
+                                    name={"myRange"}
+                                    title="Amount"
+                                    idRange={"myRange"}
+                                    inputtype={"range"}
+                                    min={500}
+                                    max={15000}
+                                    step={500}
+                                    action={this.changeValue}
+                                />
                                 < SubmitButton 
                                     name={"Connect"}
                                     idName={"submit"}
@@ -72,12 +108,9 @@ class FormContainer extends Component {
                                     action={this.sendInfo}
                                 />
                                 </div>
-
-                            </div>
-                            
+                            </div>  
                         </div>
                     </div>
-                
                 </div>
             </form>
         )
