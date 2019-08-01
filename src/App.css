@@ -453,19 +453,15 @@ input[type="number"] {
   appearance: none;
   width: 31px;
   height: 31px;
+  margin-left: -5px;
   border-radius: 50%; 
   /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  background: #9dcc57;
-  /* background-image: url('./salider-handle.png'); */
+  /* background: #9dcc57; */
+  background-image: url('./salider-handle.png');
   background-position: 0 auto;
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
-  /* -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  transition: all .5s ease; */
 }
 .slider::-ms-thumb{
   -webkit-appearance: none;
@@ -475,8 +471,8 @@ input[type="number"] {
   margin-left: -5px;
   border-radius: 50%; 
   /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  background: #9dcc57;
-  /* background-image: url('./salider-handle.png'); */
+  /* background: #9dcc57; */
+  background-image: url('./salider-handle.png');
   background-position: 0 auto;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -490,8 +486,8 @@ input[type="number"] {
   margin-left: -5px;
   border-radius: 50%; 
   /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
-  background: #9dcc57;
-  /* background-image: url('./salider-handle.png'); */
+  /* background: #9dcc57; */
+  background-image: url('./salider-handle.png');
   background-position: 0 auto;
   background-repeat: no-repeat;
   background-size: 100%;
