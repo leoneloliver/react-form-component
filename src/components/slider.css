@@ -74,9 +74,9 @@
   border-radius: 4px;
   border: 1px solid var(--brand-primary);
   margin: 0 auto;
-} */
+}  */
 
-/* input[type=range] {
+input[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
@@ -170,4 +170,21 @@ input[type=range]::-ms-thumb {
     border: 1px solid var(--brand-primary);
     margin: 0 auto;
   } 
-   */
+  
+   .custom-range::-webkit-slider-thumb {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .custom-range::-moz-range-thumb {
+    background: #fff;;
+    height: 15px;
+    width: 15px;
+  }
+
+  .custom-range::-ms-thumb {
+    background:#fff;;
+    height: 15px;
+    width: 15px;
+  }

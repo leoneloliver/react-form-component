@@ -66,9 +66,9 @@ class FormContainer extends Component {
               }
             };
         };
-        window.setTimeout(function(){
-            $("#myRange").prop("value", "5500");
-        },5000);
+        // window.setTimeout(function(){
+        //     $("#myRange").prop("value", "5500");
+        // },5000);
     }
     render() {
         return (
