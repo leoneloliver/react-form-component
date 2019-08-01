@@ -467,7 +467,21 @@ input[type="number"] {
   -ms-transition: all .5s ease;
   transition: all .5s ease; */
 }
-
+.slider::-ms-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 31px;
+  height: 31px;
+  margin-left: -5px;
+  border-radius: 50%; 
+  /* background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%); */
+  background: #9dcc57;
+  /* background-image: url('./salider-handle.png'); */
+  background-position: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
 .slider::-moz-range-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -483,7 +497,6 @@ input[type="number"] {
   background-size: 100%;
   cursor: pointer;
 }
-
 
 .slider:hover::-webkit-slider-thumb{
   box-shadow: 0px 0px 0px 5px var(--brand-primary)38;
