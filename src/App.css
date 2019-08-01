@@ -1,4 +1,7 @@
-
+:root {
+  --brand-primary: #85c526;
+  --brand-primary-light: #b7e573;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -188,7 +191,7 @@ select.form-control {
   
   height: 48px;
   border-radius: 8px;
-  background-image: linear-gradient(to top, #85c526 0%, #ccf393 100%);
+  background-image: linear-gradient(to top, var(--brand-primary) 0%, #ccf393 100%);
   border: 0;
   
   color: #ffffff;
@@ -251,7 +254,7 @@ label i {
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  background-color: #b7e573 !important;
+  background-color: var(--brand-primary-light) !important;
 }
 
 .btn-extra__rounded {
@@ -419,7 +422,7 @@ input[type="number"] {
   }
   
   5% {
-    background: #85c526 ;
+    background: var(--brand-primary) ;
   }
 }
 .loading-msg{
@@ -483,7 +486,7 @@ input[type="number"] {
 
 
 .slider:hover::-webkit-slider-thumb{
-  box-shadow: 0px 0px 0px 5px #85c52638;
+  box-shadow: 0px 0px 0px 5px var(--brand-primary)38;
   -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -492,7 +495,7 @@ input[type="number"] {
 }
 
 .slider:active::-webkit-slider-thumb{
-  box-shadow: 0px 0px 0px 5px #85c52638;
+  box-shadow: 0px 0px 0px 5px var(--brand-primary)38;
   -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -503,7 +506,7 @@ input[type="number"] {
   width: 95px;
   height: 45px !important;
   border-radius: 4px;
-  border: 1px solid #95cd43;
+  border: 1px solid var(--brand-primary);
   margin: 0 auto;
 }
 
