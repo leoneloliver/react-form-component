@@ -11,6 +11,7 @@ import Input from '../components/Input'
 import Select from '../components/Select'
 import SubmitButton from '../components/SubmitButton'
 import SliderRange from '../components/SliderRange';
+import Logo from '../components/Logo';
 
 class FormContainer extends Component {
     componentDidMount(){
@@ -24,7 +25,7 @@ class FormContainer extends Component {
         };
     }
     sendInfo(e){
-        e.preventDefault();
+        //e.preventDefault();
         console.log('Name '+ document.getElementsByName("name")[0].value);
     }
     submitForm(e){
@@ -67,52 +68,53 @@ class FormContainer extends Component {
                         <div className="col-xs-12 col-xl-4 card-special">
                             <div className="card card-outline-secondary border-0">
                                 <div className="card-body">
-                                < Input 
-                                    inputtype={"text"}
-                                    title={"Full Name"}
-                                    name={"name"}
-                                    placeholder={"Enter your Name"}
-                                    icon={"fa fa-user-o form-icon"}
-                                    required={"required"}
-                                />
-                                < Input 
-                                    inputtype={"email"}
-                                    title={"Address"}
-                                    name={"address"}
-                                    placeholder={"Enter your Address"}
-                                    icon={"fa fa-envelope-o form-icon"}
-                                    required={"required"}
-                                />
-                                < Select 
-                                    title={"Business"}
-                                    name={"business"}
-                                    placeholder={"Select Business"}
-                                    options={this.state.businessOptions}
-                                />
-                                < Select 
-                                    title={"Gender"}
-                                    name={"gender"}
-                                    placeholder={"Select Gender"}
-                                    options={this.state.genderOptions}
-                                />
-                                < SliderRange 
-                                    name={"myRange"}
-                                    title="Amount"
-                                    idRange={"myRange"}
-                                    inputtype={"range"}
-                                    min={500}
-                                    max={15000}
-                                    step={500}
-                                    action={this.changeValue}
-                                    defaultValue={1500}
-                                    displayValue={"$ 1.500"}
-                                />
-                                < SubmitButton 
-                                    name={"Connect"}
-                                    idName={"submit"}
-                                    inputtype={"submit"}
-                                    action={this.sendInfo}
-                                />
+                                    < Logo alt={"Lendified Logo"}/>
+                                    < Input 
+                                        inputtype={"text"}
+                                        title={"Full Name"}
+                                        name={"name"}
+                                        placeholder={"Enter your Name"}
+                                        icon={"fa fa-user-o form-icon"}
+                                        required={"required"}
+                                    />
+                                    < Input 
+                                        inputtype={"email"}
+                                        title={"Address"}
+                                        name={"address"}
+                                        placeholder={"Enter your Address"}
+                                        icon={"fa fa-envelope-o form-icon"}
+                                        required={"required"}
+                                    />
+                                    < Select 
+                                        title={"Business"}
+                                        name={"business"}
+                                        placeholder={"Select Business"}
+                                        options={this.state.businessOptions}
+                                    />
+                                    < Select 
+                                        title={"Gender"}
+                                        name={"gender"}
+                                        placeholder={"Select Gender"}
+                                        options={this.state.genderOptions}
+                                    />
+                                    < SliderRange 
+                                        name={"myRange"}
+                                        title="Amount"
+                                        idRange={"myRange"}
+                                        inputtype={"range"}
+                                        min={500}
+                                        max={15000}
+                                        step={500}
+                                        action={this.changeValue}
+                                        defaultValue={1500}
+                                        displayValue={"$ 1.500"}
+                                    />
+                                    < SubmitButton 
+                                        name={"Connect"}
+                                        idName={"submit"}
+                                        inputtype={"submit"}
+                                        action={this.sendInfo}
+                                    />
                                 </div>
                             </div>  
                         </div>

@@ -4,7 +4,7 @@ import './slider.css';
 const SliderRange = props => {
     return (
         <div className="form-group">
-            <div className="form-group my-5">
+            <div className="form-group my-2">
                 <input 
                     type="range" 
                     min={props.min} 
