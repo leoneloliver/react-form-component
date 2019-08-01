@@ -506,3 +506,17 @@ input[type="number"] {
   border: 1px solid #95cd43;
   margin: 0 auto;
 }
+
+input:focus, textarea:focus, select:focus, .bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+  outline: none !important;
+}
+.form-control{
+  background: #fff !important;
+}
+.form-control:focus, .form-control:hover, .form-control:active {
+  background: #fff !important;
+  box-shadow: 0 0 0 0.2rem #fff;
+  border-color: auto;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent);
+}
