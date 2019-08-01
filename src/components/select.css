@@ -11,11 +11,20 @@ ul.dropdown-menu li a {
   border: 1px solid #cccc;
   line-height: 1.8;
   padding: .5rem 1rem;
-  height: 48px !important;
+
   border-radius: 8px;
   background-color: #fafbfb;
   font-size: 0.9rem;
 }
 .dropdown-menu.show {
   padding: 0;
+  box-shadow: 0 16px 16px -1px rgba(10, 22, 70, 0.1), 0 0 1px rgba(10, 22, 70, 0.06);
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+}
+.form-control:focus .dropdown-toggle, .form-control:hover .dropdown-toggle, .form-control:active .dropdown-toggle {
+  border: 1px solid #95cd43 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 0.2rem transparent;
 }
