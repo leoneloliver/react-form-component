@@ -11,7 +11,7 @@ const SliderRange = props => {
                     max={props.max} 
                     defaultValue={props.defaultValue} 
                     step={props.step} 
-                    className="slider mb-3" 
+                    className="slider mb-3 custom-range" 
                     id={props.idRange} 
                     onMouseDown={props.action} 
                     onPointerDown={props.action}

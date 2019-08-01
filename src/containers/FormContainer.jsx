@@ -123,6 +123,7 @@ class FormContainer extends Component {
                                         defaultValue={1500}
                                         displayValue={"$ 1.500"}
                                     />
+                                    
                                     < SubmitButton 
                                         name={"Connect"}
                                         idName={"submit"}
