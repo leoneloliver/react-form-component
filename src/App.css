@@ -456,6 +456,6 @@ input:focus, textarea:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
   box-shadow: 0 0 0 0.2rem #fff;
   border-color: auto;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem transparent);
+  box-shadow: 0 0 0 0.2rem transparent;
 }
 
