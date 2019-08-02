@@ -1,5 +1,7 @@
 import React from 'react';
-import './slider.css';
+// import './slider.css';
+
+import styles from './slider.module.css';
 
 const SliderRange = props => {
     return (
@@ -11,12 +13,13 @@ const SliderRange = props => {
                     max={props.max} 
                     defaultValue={props.defaultValue} 
                     step={props.step} 
-                    className="slider mb-3 custom-range" 
+                    className={`${styles['custom-range']} slider mb-3 `}
                     id={props.idRange} 
                     onMouseDown={props.action} 
                     onPointerDown={props.action}
                 />
-                <div id="myMoney" className="mt-3 form-control amount text-center slider-display-amount">
+                
+                <div id="myMoney" className={`${styles['slider-display-amount']} amount mt-3 form-control text-center`}>
                     {props.displayValue}
                 </div> 
                 <label className="text-center">{props.title}</label>

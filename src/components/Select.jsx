@@ -1,11 +1,12 @@
 import React from 'react';
-import './select.css';
+
+import styles from './select.module.css';
 
 const Select = props => {
     return (
         <div className="form-group select">
             <select 
-                className="form-control" 
+                className={`${styles['form-control']} form-control`}
                 id={props.name} 
                 name={props.name} 
                 type={props.inputtype} 
